@@ -588,6 +588,7 @@ return function(notif)
             warn("[js.lua]: Loading libraries.");
         end;
     	SetupJsLua();
+        warn("[js.lua]: Loaded libraries.");
     else
         if (notif) then
             SendNotification({
