@@ -1,5 +1,5 @@
 return function(notif)
-	local req = request;
+    local req = request;
     local notif = (notif == nil) and true or notif;
     local getmeta = getrawmetatable;
     local StarterGui = game:GetService("StarterGui");
@@ -9,13 +9,13 @@ return function(notif)
     function GetImageID(DecalID)
     	local Result;
     	if (req) then
-    		Result = req({
-				Url = ("https://rbxdecal.glitch.me/"..DecalID),
-				Method = "GET"
-    		}).Body;
+    	    Result = req({
+	        Url = ("https://rbxdecal.glitch.me/"..DecalID),
+		Method = "GET"
+    	    }).Body;
     	else
-			Result = game:HttpGet("https://rbxdecal.glitch.me/"..DecalID);
-		end;
+	    Result = game:HttpGet("https://rbxdecal.glitch.me/"..DecalID);
+	end;
     	return "rbxassetid://"..Result;
     end;
     
